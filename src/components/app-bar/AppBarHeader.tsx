@@ -1,7 +1,6 @@
 import React from 'react'
 import ThemeSwitch from './ThemeSwitch';
 
-
 /** MUI */
 import { AppBar, Toolbar, Typography } from '@mui/material'
 

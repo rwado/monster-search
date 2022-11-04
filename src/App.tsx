@@ -1,7 +1,6 @@
 import './App.css';
 import React from 'react';
 import MonsterList from './components/monster-list/MonsterList';
-import SearchBox from './components/search-box/SearchBox';
 import AppBarHeader from './components/app-bar/AppBarHeader';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { getData } from './utils/data.utils';
@@ -9,9 +8,8 @@ import MonsterDetails from './components/monster-details/MonsterDetails';
 
 
 /** MUI */
-import { ThemeProvider, createTheme, Container, TextField, Typography, Grid, Stack, AppBar } from '@mui/material'
+import { ThemeProvider, createTheme, Grid } from '@mui/material'
 import CssBaseline from "@mui/material/CssBaseline";
-
 
 const themeLight = createTheme({
   palette: {
@@ -25,9 +23,7 @@ const themeDark = createTheme({
   },
 });
 
-interface MyProps {
-
-}
+interface MyProps {}
 
 interface MyState {
   monsterList: IMonster[];
@@ -57,7 +53,6 @@ class App extends React.Component<MyProps, MyState> {
     }
   }
 
-
   switchTheme = () => {
     this.setState({
       lightTheme: !this.state.lightTheme
@@ -72,10 +67,7 @@ class App extends React.Component<MyProps, MyState> {
     fetchUsers();
   }
 
-
-
   render() {
-
     const { monsterList, lightTheme } = this.state;
     const { switchTheme } = this;
 
@@ -95,12 +87,6 @@ class App extends React.Component<MyProps, MyState> {
                 element={<MonsterDetails />}
               />
             </Routes>
-            {/* <SearchBox
-              onChangeHandler={onSearchChange}
-              label="Monster Search"
-              placeholder="Enter Monster's Name"/> */}
-           
-
           </Grid>
         </Router>
       </ThemeProvider>

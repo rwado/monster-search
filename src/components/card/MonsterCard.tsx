@@ -1,9 +1,9 @@
 import React from 'react'
+import { IMonster } from '../../App';
+import { Link } from 'react-router-dom';
 
 /** MUI */
 import { Typography, Grid, Card, CardMedia, CardContent } from '@mui/material'
-import { IMonster } from '../../App';
-import { Link } from 'react-router-dom';
 
 interface MyProps {
   monster: IMonster;

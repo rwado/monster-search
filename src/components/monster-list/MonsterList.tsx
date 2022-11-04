@@ -1,11 +1,10 @@
 import React from 'react'
 import MonsterCard from '../card/MonsterCard';
+import SearchBox from '../search-box/SearchBox';
+import { IMonster } from '../../App';
 
 /** MUI */
 import { Grid } from '@mui/material'
-import { IMonster } from '../../App';
-import SearchBox from '../search-box/SearchBox';
-import { Link } from 'react-router-dom';
 
 interface MyProps {
   monsters: IMonster[]; 
@@ -24,9 +23,7 @@ class MonsterList extends React.Component<MyProps, MyState> {
   }
   
   render() {
-
     const { monsters } = this.props;
-
     const foundMonsters =  monsters.filter((monster) => {
       return monster.name.toLocaleLowerCase().includes(this.state.searchField.toLocaleLowerCase())
     })
@@ -54,7 +51,6 @@ class MonsterList extends React.Component<MyProps, MyState> {
           </Grid>
         </Grid>
       </>
-
     )
   }
 }

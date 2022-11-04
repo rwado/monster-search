@@ -1,7 +1,8 @@
-import { Card, CardContent, CardMedia, Container, Table, TableBody, TableCell, TableRow, Typography } from '@mui/material';
-import { useState } from 'react'
 import { useLocation } from 'react-router-dom';
 import { IMonster } from '../../App';
+
+/** MUI */
+import { Card, CardContent, CardMedia, Container, Table, TableBody, TableCell, TableRow, Typography } from '@mui/material';
 
 
 const MonsterDetails = () => {

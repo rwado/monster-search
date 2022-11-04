@@ -1,5 +1,6 @@
 import React from 'react'
 import { ChangeEventHandler } from 'react';
+
 /** MUI */
 import { TextField, Grid } from '@mui/material'
 
@@ -24,14 +25,9 @@ class SearchBox extends React.Component<MyProps> {
           label={this.props.label}
           onChange={this.props.onChangeHandler}
         />
-
       </Grid>
     )
   }
-
 }
 
-export default SearchBox;
-
-
-      
+export default SearchBox;      

@@ -1,8 +1,8 @@
 import React from "react"
 
+/** MUI */
 import { FormControlLabel, Switch } from '@mui/material'
 import { styled } from '@mui/material/styles';
-
 
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
@@ -56,7 +56,6 @@ interface MyProps {
   themeHandler: () => void;
 }
 
-
 class ThemeSwitch extends React.Component<MyProps> { 
   render() {
     return (
@@ -64,7 +63,7 @@ class ThemeSwitch extends React.Component<MyProps> {
         onChange={this.props.themeHandler}
         control={<MaterialUISwitch sx={{ m: 1 }}  />}
         label="Change theme"
-    />
+      />
     )
   }
 }
